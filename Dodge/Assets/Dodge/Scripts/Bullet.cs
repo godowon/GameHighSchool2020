@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float m_Speed = 25f;
     // Start is called before the first frame update
     void Start()
     {
         
     }
+
+    public float m_Speed = 5f;
+
+    public float m_DestoryCooltime = 5f;
 
     // Update is called once per frame
     void Update()
@@ -19,15 +21,16 @@ public class Bullet : MonoBehaviour
 
         rigidbody.AddForce(transform.forward * m_Speed);
 
-        m_DestoryCooltime -= Timeout.deltaTime;
+        m_DestoryCooltime -= Time.deltaTime;
 
         if (m_DestoryCooltime <= 0)
-            gameObject.SetActive(false);
+            Destroy(gameObject);
+           //gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-       if(other.attachedRigidbody.tag == "Player")
+        if (other.attachedRigidbody != null && other.attachedRigidbody.tag == "Player")
         {
             var player = other.attachedRigidbody.GetComponent<PlayerController>();
             player.Die();
