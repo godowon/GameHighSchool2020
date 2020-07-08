@@ -24,10 +24,11 @@ public class PlayerController : MonoBehaviour
         if (fireAxis > 0.95f)
             Die();
     }
+    public GameManager m_GameManager;
 
     public void Die()
     {
         Debug.Log("사망");
-        gameObject.SetActive(false);
+        m_GameManager.GameOver();
     }
 }
