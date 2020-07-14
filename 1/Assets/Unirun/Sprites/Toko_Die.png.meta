@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: -5391678498351086127
     second: Toko_Die_5
+  - first:
+      213: -7146219802328145281
+    second: Toko_Die_0
+  - first:
+      213: 6475956766889662675
+    second: Toko_Die_1
+  - first:
+      213: -9040203334361776575
+    second: Toko_Die_2
+  - first:
+      213: 1224759716443300881
+    second: Toko_Die_3
+  - first:
+      213: 6503845546698343592
+    second: Toko_Die_4
+  - first:
+      213: -2814277084561991437
+    second: Toko_Die_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -63,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 492c115e49cef8950800000000000000
-      internalID: 6453636915287671444
+      spriteID: f726e5bb3f683dc90800000000000000
+      internalID: -7146219802328145281
       vertices: []
       indices: 
       edges: []
@@ -129,7 +147,7 @@ TextureImporter:
       name: Toko_Die_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -140,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e16de439a436ad30800000000000000
-      internalID: 4442295983789662697
+      spriteID: 3d8de3f4e583fd950800000000000000
+      internalID: 6475956766889662675
       vertices: []
       indices: 
       edges: []
@@ -161,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3ec298269abdade0800000000000000
-      internalID: -1320193961661116866
+      spriteID: 14e7016e6feba8280800000000000000
+      internalID: -9040203334361776575
       vertices: []
       indices: 
       edges: []
@@ -171,7 +189,7 @@ TextureImporter:
       name: Toko_Die_3
       rect:
         serializedVersion: 2
-        x: 193
+        x: 192
         y: 0
         width: 64
         height: 64
@@ -182,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 446f0d45adb39b010800000000000000
-      internalID: 1205060184210208324
+      spriteID: 114afc919783ff010800000000000000
+      internalID: 1224759716443300881
       vertices: []
       indices: 
       edges: []
@@ -192,7 +210,7 @@ TextureImporter:
       name: Toko_Die_4
       rect:
         serializedVersion: 2
-        x: 257
+        x: 256
         y: 0
         width: 64
         height: 64
@@ -203,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df8c949aaf2858ab0800000000000000
-      internalID: -5006451397658818307
+      spriteID: 8a406fcd01d424a50800000000000000
+      internalID: 6503845546698343592
       vertices: []
       indices: 
       edges: []
@@ -224,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d50caad8f8ec25b0800000000000000
-      internalID: -5391678498351086127
+      spriteID: 3f8192bf6eda1f8d0800000000000000
+      internalID: -2814277084561991437
       vertices: []
       indices: 
       edges: []
