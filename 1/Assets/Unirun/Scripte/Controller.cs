@@ -5,6 +5,11 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     public Animator m_Animator;
+    public Rigidbody2D m_Rigidbody2D;
+    public AudioSource m_AudioSource;
+
+    public AudioClip m_Jump;
+    public AudioClip m_Die;
 
     public bool m_IsGround = false;
     public bool m_IsDead = false;
@@ -13,8 +18,6 @@ public class Controller : MonoBehaviour
     public bool isground = true;
 
     public int m_JumpCount = 0;
-
-    public Rigidbody2D m_Rigidbody2D;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,7 @@ public class Controller : MonoBehaviour
         //}
         //m_Animator.SetBool("IsDead", isdead);
         //m_Animator.SetBool("IsGround", isground);
+        if (m_IsDead) return;
 
         m_Animator.SetBool("IsGround", m_IsGround);
 
@@ -42,6 +46,9 @@ public class Controller : MonoBehaviour
             m_Rigidbody2D.velocity = Vector2.zero;
             m_Rigidbody2D.AddForce(Vector2.up * 400);
             m_JumpCount++;
+
+            m_AudioSource.clip = m_Jump;
+            m_AudioSource.Play();
         }
     }
 
@@ -58,6 +65,20 @@ public class Controller : MonoBehaviour
         if (collision.otherCollider.tag == "ground")
         {
             m_IsGround = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "deadzon")
+        {
+            m_IsDead = true;
+            m_Animator.SetBool("IsDead", m_IsDead);
+
+            GameManager.Instance.OnPlayerDead();
+
+            m_AudioSource.clip = m_Die;
+            m_AudioSource.Play();
         }
     }
 }
