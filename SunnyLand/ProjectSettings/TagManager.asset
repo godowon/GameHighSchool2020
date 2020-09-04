@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lagger
+  - Item
   layers:
   - Default
   - TransparentFX
